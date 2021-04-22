@@ -1,0 +1,4 @@
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Database\bin\Debug\netcoreapp3.1\Wheeler.Model.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Database\obj\Debug\netcoreapp3.1\Wheeler.Database.csprojAssemblyReference.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Database\obj\Debug\netcoreapp3.1\Wheeler.Database.AssemblyInfoInputs.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Database\obj\Debug\netcoreapp3.1\Wheeler.Database.AssemblyInfo.cs
