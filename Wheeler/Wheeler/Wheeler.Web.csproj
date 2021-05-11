@@ -5,11 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Wheeler.IoC\Wheeler.IoC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Api\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wheeler.IoC\Wheeler.IoC.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

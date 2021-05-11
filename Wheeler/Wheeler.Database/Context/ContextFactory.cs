@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using Wheeler.Database.Identity.Context;
 
 namespace Wheeler.Database.Context
 {
-    public sealed class ContextFactory:IDesignTimeDbContextFactory<WhelerDbContext>
+    public sealed class ContextFactory : IDesignTimeDbContextFactory<SecurityContext>
     {
-        public WhelerDbContext CreateDbContext(string[] args)
+        public SecurityContext CreateDbContext(string[] args)
         {
-            const string connectionString = "Server=BINAYKUSHWAHA\\KALE;Database=Database;Integrated Security=true;Connection Timeout=10;";
-            var builder = new DbContextOptionsBuilder<WhelerDbContext>();
+            const string connectionString = "Server=BINAYKUSHWAHA\\KALE;Database=Wheeler;UID=sa;PWD=kush;";
+            var builder = new DbContextOptionsBuilder<SecurityContext>();
             builder.UseSqlServer(connectionString, options => options.MigrationsAssembly(Assembly.GetExecutingAssembly().GetName().Name));
-            return new WhelerDbContext(builder.Options);
+            return new SecurityContext(builder.Options);
         }
     }
 }

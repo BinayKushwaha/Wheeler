@@ -6,7 +6,6 @@ namespace Wheeler.CrossCutting.Enum.Identity
 {
     public enum UserRole
     {
-        Owner=1,
-        Administrator=2
+        Administrator=1
     }
 }
