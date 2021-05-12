@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Wheeler.Database.Context;
 using Wheeler.Database.Identity;
 using Wheeler.Database.Identity.Context;
+using Wheeler.IoC.Helper;
 using Wheeler.Model.DbEntities;
 
 namespace Wheeler.IoC
@@ -17,8 +18,7 @@ namespace Wheeler.IoC
             services.AddDbContext<SecurityContext>(options => options.UseSqlServer(connectionString));
             services.AddDbContextPool<ApplcationContext>(options => options.UseSqlServer(connectionString));
 
-            services.AddIdentityCore<ApplicationUsers>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<ApplicationRoles>()
-            .AddEntityFrameworkStores<SecurityContext>();
+            IdentityHelper.ConfigureService(services);
         }
     }
 }
