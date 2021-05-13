@@ -10,7 +10,7 @@ namespace Wheeler.IoC.Helper
 {
     public static class IdentityHelper
     {
-        public static void ConfigureService(this IServiceCollection services)
+        public static void ConfigureService(IServiceCollection services)
         {
             services.AddIdentityCore<ApplicationUsers>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<ApplicationRoles>()
             .AddEntityFrameworkStores<SecurityContext>();

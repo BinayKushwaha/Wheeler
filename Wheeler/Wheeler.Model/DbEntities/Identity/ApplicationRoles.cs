@@ -9,7 +9,7 @@ namespace Wheeler.Model.DbEntities
     {
         public ApplicationRoles() : base() { }
         public ApplicationRoles(string name) : base(name) { }
-        public bool IsDeleted { get; set; }
+        public bool IsActive { get; set; }
         public string Description { get; set; }
     }
 }

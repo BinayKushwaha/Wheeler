@@ -15,5 +15,8 @@ namespace Wheeler.Database.Context
         public DbSet<ApplicationRoles> ApplicationRoles { get; set; }
         public DbSet<AppUsers> AppUsers { get; set; }
         public DbSet<PersonalDetail> PersonalDetails { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<CompanyDetail> CompanyDetails { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace Wheeler.Database.Configuration.Identity
         {
             builder.ToTable(name: "Users");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.IsDeleted).IsRequired();
+            builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
             builder.HasOne(x => x.AppUsers).WithOne(x => x.Users)
                 .HasForeignKey<AppUsers>(x => x.UserId)
                 .HasConstraintName("FK_AspUser_ApplicationUser");

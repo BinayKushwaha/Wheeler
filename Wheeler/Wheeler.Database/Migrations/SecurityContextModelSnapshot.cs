@@ -157,14 +157,24 @@ namespace Wheeler.Database.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("IsCompnay")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsEmployee")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("AppUsers");
                 });
@@ -188,8 +198,10 @@ namespace Wheeler.Database.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -237,6 +249,79 @@ namespace Wheeler.Database.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Wheeler.Model.DbEntities.CompanyDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
+                    b.ToTable("CompanyDetail");
+                });
+
+            modelBuilder.Entity("Wheeler.Model.DbEntities.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
+                    b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("Wheeler.Model.DbEntities.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Desigination")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
+                    b.ToTable("Employee");
+                });
+
             modelBuilder.Entity("Wheeler.Model.DbEntities.PersonalDetail", b =>
                 {
                     b.Property<int>("Id")
@@ -276,8 +361,10 @@ namespace Wheeler.Database.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.ToTable("Roles");
                 });
@@ -338,9 +425,47 @@ namespace Wheeler.Database.Migrations
                     b.HasOne("Wheeler.Model.DbEntities.ApplicationUsers", "Users")
                         .WithOne("AppUsers")
                         .HasForeignKey("Wheeler.Model.DbEntities.AppUsers", "UserId")
-                        .HasConstraintName("FK_AspUser_ApplicationUser");
+                        .HasConstraintName("FK_AspUser_ApplicationUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("Wheeler.Model.DbEntities.CompanyDetail", b =>
+                {
+                    b.HasOne("Wheeler.Model.DbEntities.AppUsers", "AppUsers")
+                        .WithOne("CompanyDetail")
+                        .HasForeignKey("Wheeler.Model.DbEntities.CompanyDetail", "AppUserId")
+                        .HasConstraintName("FK_Companydetail_To_AppUsers")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUsers");
+                });
+
+            modelBuilder.Entity("Wheeler.Model.DbEntities.Customer", b =>
+                {
+                    b.HasOne("Wheeler.Model.DbEntities.AppUsers", "AppUsers")
+                        .WithOne("Customer")
+                        .HasForeignKey("Wheeler.Model.DbEntities.Customer", "AppUserId")
+                        .HasConstraintName("FK_Customer_To_AppUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUsers");
+                });
+
+            modelBuilder.Entity("Wheeler.Model.DbEntities.Employee", b =>
+                {
+                    b.HasOne("Wheeler.Model.DbEntities.AppUsers", "AppUsers")
+                        .WithOne("Employee")
+                        .HasForeignKey("Wheeler.Model.DbEntities.Employee", "AppUserId")
+                        .HasConstraintName("FK_Employee_To_AppUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUsers");
                 });
 
             modelBuilder.Entity("Wheeler.Model.DbEntities.PersonalDetail", b =>
@@ -348,7 +473,7 @@ namespace Wheeler.Database.Migrations
                     b.HasOne("Wheeler.Model.DbEntities.AppUsers", "AppUsers")
                         .WithOne("PersonalDetail")
                         .HasForeignKey("Wheeler.Model.DbEntities.PersonalDetail", "AppUserId")
-                        .HasConstraintName("Fk_ApplicationUser_PersonalDetail")
+                        .HasConstraintName("FK_PersonalDetail_To_AppUsers")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -366,6 +491,12 @@ namespace Wheeler.Database.Migrations
 
             modelBuilder.Entity("Wheeler.Model.DbEntities.AppUsers", b =>
                 {
+                    b.Navigation("CompanyDetail");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Employee");
+
                     b.Navigation("PersonalDetail");
                 });
 

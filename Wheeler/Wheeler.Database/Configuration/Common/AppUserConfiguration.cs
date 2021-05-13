@@ -13,9 +13,13 @@ namespace Wheeler.Database.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.HasOne(x => x.PersonalDetail).WithOne(x => x.AppUsers)
-                .HasForeignKey<PersonalDetail>(x => x.AppUserId)
-                .HasConstraintName("Fk_ApplicationUser_PersonalDetail");
+            builder.Property(a => a.IsCompnay).IsRequired().HasDefaultValue(false);
+            builder.Property(a => a.IsEmployee).IsRequired().HasDefaultValue(false);
+           
+            builder.Property(a => a.UserId).IsRequired();
+            builder.HasOne(a => a.Users).WithOne(b => b.AppUsers).
+                HasForeignKey<AppUsers>(c => c.UserId).
+                HasConstraintName("FK_AspNetUsers_AppsUser");
         }
     }
 }

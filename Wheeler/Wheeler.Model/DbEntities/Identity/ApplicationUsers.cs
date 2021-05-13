@@ -8,7 +8,7 @@ namespace Wheeler.Model.DbEntities
     public class ApplicationUsers : IdentityUser
     {
         public ApplicationUsers() : base() { }
-        public bool IsDeleted { get; set; }
+        public bool IsActive { get; set; }
 
         public virtual AppUsers  AppUsers{ get; set; }
     }
