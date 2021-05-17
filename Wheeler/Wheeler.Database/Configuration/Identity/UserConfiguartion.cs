@@ -17,7 +17,7 @@ namespace Wheeler.Database.Configuration.Identity
             builder.Property(x => x.IsActive).IsRequired().HasDefaultValue(true);
             builder.HasOne(x => x.AppUsers).WithOne(x => x.Users)
                 .HasForeignKey<AppUsers>(x => x.UserId)
-                .HasConstraintName("FK_AspUser_ApplicationUser");
+                .HasConstraintName("FK_AspUser_ApplicationUser").OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

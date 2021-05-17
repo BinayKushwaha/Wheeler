@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wheeler.Database.Context;
 
 namespace Wheeler.Database.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class SecurityContextModelSnapshot : ModelSnapshot
+    [Migration("20210517174243_cascade delete on user and app user relation modeified to restrict")]
+    partial class cascadedeleteonuserandappuserrelationmodeifiedtorestrict
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
