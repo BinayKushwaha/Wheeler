@@ -26,6 +26,8 @@ namespace Wheeler
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
             services.AddCustomServices(Configuration);
         }
 
@@ -39,13 +41,15 @@ namespace Wheeler
             IdentityDataInitializer.SeedIdentity(userManager, roleManager);
             app.UseAuthentication();
 
+            app.UseHttpsRedirection();
+
             app.UseRouting();
             
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
+                app.UseEndpoints(endpoints =>
                 {
-                    await context.Response.WriteAsync("hello world!");
+                    endpoints.MapControllers();
                 });
                 //endpoints.MapControllerRoute(
                 //    name:"default",

@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Wheeler.Database.Context;
 using Wheeler.Database.Identity.Context;
 
 namespace Wheeler.Database.Migrations
 {
-    [DbContext(typeof(SecurityContext))]
+    [DbContext(typeof(ApplicationContext))]
     partial class SecurityContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

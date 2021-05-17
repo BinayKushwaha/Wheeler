@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Wheeler.CrossCutting.Enum.Identity;
 using Wheeler.Model.DbEntities;
+using Wheeler.Model.Enum;
 
 namespace Wheeler.IoC.Helper
 {

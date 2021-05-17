@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Wheeler.Database.Identity.Context;
+using Wheeler.Database.Context;
 using Wheeler.Model.DbEntities;
 
 namespace Wheeler.IoC.Helper
@@ -13,7 +13,7 @@ namespace Wheeler.IoC.Helper
         public static void ConfigureService(IServiceCollection services)
         {
             services.AddIdentityCore<ApplicationUsers>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<ApplicationRoles>()
-            .AddEntityFrameworkStores<SecurityContext>();
+            .AddEntityFrameworkStores<ApplicationContext>();
 
             services.Configure<IdentityOptions>(opt =>
             {

@@ -1,4 +1,10 @@
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.csprojAssemblyReference.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.AssemblyInfoInputs.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.AssemblyInfo.cs
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.csproj.CoreCompileInputs.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.IoC.deps.json
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.IoC.runtimeconfig.json
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.IoC.runtimeconfig.dev.json
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.IoC.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.IoC.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Application.dll
@@ -11,10 +17,7 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.C
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Database.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Domain.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Model.pdb
-D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.csprojAssemblyReference.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.AssemblyInfoInputs.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.AssemblyInfo.cs
-D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.csproj.CoreCompileInputs.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.csproj.CopyComplete
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.pdb
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.genruntimeconfig.cache

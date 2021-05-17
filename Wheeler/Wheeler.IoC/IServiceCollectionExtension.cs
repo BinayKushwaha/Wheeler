@@ -2,10 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Wheeler.Database.Context;
-using Wheeler.Database.Identity;
-using Wheeler.Database.Identity.Context;
 using Wheeler.IoC.Helper;
-using Wheeler.Model.DbEntities;
 
 namespace Wheeler.IoC
 {
@@ -14,11 +11,14 @@ namespace Wheeler.IoC
         public static void AddCustomServices(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration["ConnectionStrings:ConnectionDbString"];
-            
-            services.AddDbContext<SecurityContext>(options => options.UseSqlServer(connectionString));
-            services.AddDbContextPool<ApplcationContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
 
             IdentityHelper.ConfigureService(services);
+            CommonServicesHelper.ConfigureServices(services);
+
+            RepositoryHelper.ConfiguerServices(services);
+
         }
     }
 }

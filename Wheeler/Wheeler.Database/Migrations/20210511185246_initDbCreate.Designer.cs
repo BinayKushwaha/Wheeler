@@ -5,11 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Wheeler.Database.Context;
 using Wheeler.Database.Identity.Context;
 
 namespace Wheeler.Database.Migrations
 {
-    [DbContext(typeof(SecurityContext))]
+    [DbContext(typeof(ApplicationContext))]
     [Migration("20210511185246_initDbCreate")]
     partial class initDbCreate
     {

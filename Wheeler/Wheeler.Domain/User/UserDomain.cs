@@ -1,0 +1,60 @@
+﻿using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using Wheeler.Database.Repository;
+using Wheeler.Model.DbEntities;
+using Wheeler.Model.ViewModel;
+
+namespace Wheeler.Domain
+{
+    public class UserDomain : IUserDomain
+    {
+        private readonly IRepositoryService<AppUsers, int> _userRepository;
+        private readonly UserManager<ApplicationUsers> _userManager;
+        private readonly IUnitOfWork _unitOfWork;
+        public UserDomain(IRepositoryService<AppUsers, int> userRepository,
+            IUnitOfWork unitOfWork,
+            UserManager<ApplicationUsers> userManager
+            )
+        {
+            this._userRepository = userRepository;
+            this._unitOfWork = unitOfWork;
+            this._userManager = userManager;
+        }
+        public async Task<RegisterUserViewModel> Register(RegisterUserViewModel model)
+        {
+            try
+            {
+                ApplicationUsers applicationUser = new ApplicationUsers();
+                applicationUser.Email = model.Email;
+                applicationUser.UserName = model.UserName;
+
+                var existingUser = _userManager.FindByNameAsync(model.UserName);
+                if (existingUser.Result != null)
+                    applicationUser = existingUser.Result;
+                else
+                {
+                    var newAddedUser =await _userManager.CreateAsync(applicationUser, model.Password);
+                    if (newAddedUser.Succeeded)
+                        applicationUser =await _userManager.FindByNameAsync(model.UserName);
+                }
+                AppUsers appUsers = new AppUsers();
+                appUsers.UserId = applicationUser.Id;
+                appUsers.IsCompnay = model.IsCompany;
+                appUsers.IsEmployee = model.IsEmployee;
+                
+                await _userRepository.AddAsync(appUsers);
+                await _unitOfWork.CommitAsync();
+                
+                model.Id = appUsers.Id;
+                return model;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+    }
+}

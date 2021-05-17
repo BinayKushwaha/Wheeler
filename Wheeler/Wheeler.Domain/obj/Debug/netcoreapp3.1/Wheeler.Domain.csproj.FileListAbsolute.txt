@@ -1,4 +1,6 @@
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.Domain.deps.json
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.Domain.runtimeconfig.json
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.Domain.runtimeconfig.dev.json
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.Domain.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.Domain.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\bin\Debug\netcoreapp3.1\Wheeler.CrossCutting.dll
@@ -14,3 +16,4 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\obj\Debug\netcoreapp3.1\Wheele
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\obj\Debug\netcoreapp3.1\Wheeler.Domain.csproj.CopyComplete
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\obj\Debug\netcoreapp3.1\Wheeler.Domain.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\obj\Debug\netcoreapp3.1\Wheeler.Domain.pdb
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.Domain\obj\Debug\netcoreapp3.1\Wheeler.Domain.genruntimeconfig.cache

@@ -1,15 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Wheeler.Model.DbEntities;
 
 namespace Wheeler.Database.Context
 {
-    public sealed class ApplcationContext:DbContext
+    public sealed class ApplicationContext: IdentityDbContext<ApplicationUsers>
     {
-        public ApplcationContext(DbContextOptions<DbContext> options) : base(options) { }
+        public ApplicationContext(DbContextOptions options) : base(options) 
+        {
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
         public DbSet<ApplicationUsers> ApplicationUsers { get; set; }
         public DbSet<ApplicationRoles> ApplicationRoles { get; set; }

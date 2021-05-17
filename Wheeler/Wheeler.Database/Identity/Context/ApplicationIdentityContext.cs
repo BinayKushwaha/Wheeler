@@ -8,20 +8,20 @@ using Wheeler.Model.DbEntities;
 
 namespace Wheeler.Database.Identity.Context
 {
-    public sealed class SecurityContext : IdentityDbContext<ApplicationUsers>
-    {
-        public SecurityContext(DbContextOptions<SecurityContext> options)
-           : base(options)
-        {
-            //Database.EnsureCreated();
-        }
+    //public sealed class SecurityContext : IdentityDbContext<ApplicationUsers>
+    //{
+    //    public SecurityContext(DbContextOptions<SecurityContext> options)
+    //       : base(options)
+    //    {
+    //        //Database.EnsureCreated();
+    //    }
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
+    //    protected override void OnModelCreating(ModelBuilder builder)
+    //    {
+    //        base.OnModelCreating(builder);
 
-            //builder.ApplyConfiguration(new Wheeler.Database.Configuration.Identity.RoleConfiguration());
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        }
-    }
+    //        //builder.ApplyConfiguration(new Wheeler.Database.Configuration.Identity.RoleConfiguration());
+    //        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    //    }
+    //}
 }

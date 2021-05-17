@@ -1,3 +1,8 @@
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.csprojAssemblyReference.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.AssemblyInfoInputs.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.AssemblyInfo.cs
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.csproj.CoreCompileInputs.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Web.exe
@@ -6,12 +11,16 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Web.r
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Web.runtimeconfig.dev.json
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Web.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Web.pdb
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -32,9 +41,11 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.Ide
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.CodeDom.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
@@ -49,6 +60,11 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Application.dll
@@ -63,11 +79,6 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Cross
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Database.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Domain.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Model.pdb
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.csprojAssemblyReference.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.AssemblyInfoInputs.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.AssemblyInfo.cs
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.csproj.CoreCompileInputs.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\staticwebassets\Wheeler.Web.StaticWebAssets.Manifest.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\staticwebassets\Wheeler.Web.StaticWebAssets.xml
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\scopedcss\bundle\Wheeler.Web.styles.css
@@ -76,5 +87,3 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.c
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.genruntimeconfig.cache
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Humanizer.dll
-D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

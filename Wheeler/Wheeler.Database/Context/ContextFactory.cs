@@ -8,14 +8,16 @@ using Wheeler.Database.Identity.Context;
 
 namespace Wheeler.Database.Context
 {
-    public sealed class ContextFactory : IDesignTimeDbContextFactory<SecurityContext>
-    {
-        public SecurityContext CreateDbContext(string[] args)
-        {
-            const string connectionString = "Server=BINAYKUSHWAHA\\KALE;Database=Wheeler;UID=sa;PWD=kush;";
-            var builder = new DbContextOptionsBuilder<SecurityContext>();
-            builder.UseSqlServer(connectionString, options => options.MigrationsAssembly(Assembly.GetExecutingAssembly().GetName().Name));
-            return new SecurityContext(builder.Options);
-        }
-    }
+    //public sealed class ContextFactory : IDesignTimeDbContextFactory<SecurityContext>
+    //{
+    //    public SecurityContext CreateDbContext(string[] args)
+    //    {
+    //        const string connectionString = "Server=BINAYKUSHWAHA\\KALE;Database=Wheeler;UID=sa;PWD=kush;";
+    //        var builder = new DbContextOptionsBuilder<SecurityContext>();
+    //        builder.UseSqlServer(connectionString, options => options.MigrationsAssembly(Assembly.GetExecutingAssembly().GetName().Name));
+    //        return new SecurityContext(builder.Options);
+    //    }
+    //}
+
+   
 }
