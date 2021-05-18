@@ -58,6 +58,7 @@ namespace Wheeler.Domain
             }
             catch (Exception ex)
             {
+                // git dev branch create, commit and merge --test
                 throw;
             }
         }
