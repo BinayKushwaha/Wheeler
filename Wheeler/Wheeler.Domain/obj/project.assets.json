@@ -1676,6 +1676,16 @@
         "runtime": {
           "bin/placeholder/Wheeler.Model.dll": {}
         }
+      },
+      "Wheeler.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Wheeler.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Wheeler.Utils.dll": {}
+        }
       }
     }
   },
@@ -6226,11 +6236,17 @@
       "type": "project",
       "path": "../Wheeler.Model/Wheeler.Model.csproj",
       "msbuildProject": "../Wheeler.Model/Wheeler.Model.csproj"
+    },
+    "Wheeler.Utils/1.0.0": {
+      "type": "project",
+      "path": "../Wheeler.Utils/Wheeler.Utils.csproj",
+      "msbuildProject": "../Wheeler.Utils/Wheeler.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Wheeler.Database >= 1.0.0"
+      "Wheeler.Database >= 1.0.0",
+      "Wheeler.Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6262,6 +6278,9 @@
           "projectReferences": {
             "D:\\Project\\Startup\\Wheeler\\Wheeler\\Wheeler.Database\\Wheeler.Database.csproj": {
               "projectPath": "D:\\Project\\Startup\\Wheeler\\Wheeler\\Wheeler.Database\\Wheeler.Database.csproj"
+            },
+            "D:\\Project\\Startup\\Wheeler\\Wheeler\\Wheeler.Utils\\Wheeler.Utils.csproj": {
+              "projectPath": "D:\\Project\\Startup\\Wheeler\\Wheeler\\Wheeler.Utils\\Wheeler.Utils.csproj"
             }
           }
         }

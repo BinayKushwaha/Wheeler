@@ -87,3 +87,5 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.c
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.genruntimeconfig.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Utils.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Utils.pdb

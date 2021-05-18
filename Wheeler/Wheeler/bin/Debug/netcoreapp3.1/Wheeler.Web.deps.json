@@ -1596,7 +1596,8 @@
       },
       "Wheeler.Domain/1.0.0": {
         "dependencies": {
-          "Wheeler.Database": "1.0.0"
+          "Wheeler.Database": "1.0.0",
+          "Wheeler.Utils": "1.0.0"
         },
         "runtime": {
           "Wheeler.Domain.dll": {}
@@ -1628,6 +1629,14 @@
         },
         "compile": {
           "Wheeler.Model.dll": {}
+        }
+      },
+      "Wheeler.Utils/1.0.0": {
+        "runtime": {
+          "Wheeler.Utils.dll": {}
+        },
+        "compile": {
+          "Wheeler.Utils.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4016,6 +4025,11 @@
       "sha512": ""
     },
     "Wheeler.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Wheeler.Utils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

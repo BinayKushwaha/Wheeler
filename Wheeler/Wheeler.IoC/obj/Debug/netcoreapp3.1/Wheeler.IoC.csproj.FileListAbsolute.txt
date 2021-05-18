@@ -21,3 +21,5 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.I
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.pdb
 D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\obj\Debug\netcoreapp3.1\Wheeler.IoC.genruntimeconfig.cache
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Utils.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler.IoC\bin\Debug\netcoreapp3.1\Wheeler.Utils.pdb

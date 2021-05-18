@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wheeler.Domain", "Wheeler.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wheeler.Application", "Wheeler.Application\Wheeler.Application.csproj", "{92273FBB-FD7D-4228-9556-41CAE3AF7BFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wheeler.IoC", "Wheeler.IoC\Wheeler.IoC.csproj", "{12130F22-33E0-412B-9F70-7EB7069A6B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wheeler.IoC", "Wheeler.IoC\Wheeler.IoC.csproj", "{12130F22-33E0-412B-9F70-7EB7069A6B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wheeler.CrossCutting", "Wheeler.CrossCutting\Wheeler.CrossCutting.csproj", "{077A4878-8BD6-4B3F-A6EC-78760A9ED7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wheeler.CrossCutting", "Wheeler.CrossCutting\Wheeler.CrossCutting.csproj", "{077A4878-8BD6-4B3F-A6EC-78760A9ED7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wheeler.Utils", "Wheeler.Utils\Wheeler.Utils.csproj", "{299E7BB0-E467-4A8C-BDF6-70C6F2B16943}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{077A4878-8BD6-4B3F-A6EC-78760A9ED7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{077A4878-8BD6-4B3F-A6EC-78760A9ED7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{077A4878-8BD6-4B3F-A6EC-78760A9ED7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299E7BB0-E467-4A8C-BDF6-70C6F2B16943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299E7BB0-E467-4A8C-BDF6-70C6F2B16943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299E7BB0-E467-4A8C-BDF6-70C6F2B16943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299E7BB0-E467-4A8C-BDF6-70C6F2B16943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

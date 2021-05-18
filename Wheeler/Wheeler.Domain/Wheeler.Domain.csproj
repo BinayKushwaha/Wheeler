@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Wheeler.Database\Wheeler.Database.csproj" />
+    <ProjectReference Include="..\Wheeler.Utils\Wheeler.Utils.csproj" />
   </ItemGroup>
 
 </Project>

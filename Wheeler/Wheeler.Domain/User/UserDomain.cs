@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Wheeler.Database.Repository;
 using Wheeler.Model.DbEntities;
 using Wheeler.Model.ViewModel;
+using Wheeler.Utils.CustomException;
 
 namespace Wheeler.Domain
 {
@@ -40,6 +41,10 @@ namespace Wheeler.Domain
                     if (newAddedUser.Succeeded)
                         applicationUser =await _userManager.FindByNameAsync(model.UserName);
                 }
+               
+                if (_userRepository.GetAync(a => a.UserId == applicationUser.Id) != null)
+                    throw new CustomException($"{model.UserName} as username already exist.");
+               
                 AppUsers appUsers = new AppUsers();
                 appUsers.UserId = applicationUser.Id;
                 appUsers.IsCompnay = model.IsCompany;

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Wheeler.Application;
 using Wheeler.Model.DbEntities;
 using Wheeler.Model.ViewModel;
+using Wheeler.Utils.CustomException;
 
 namespace Wheeler.Web.Api.Controller.Account
 {
@@ -16,8 +17,7 @@ namespace Wheeler.Web.Api.Controller.Account
     public class AccountController : ControllerBase
     {
         private readonly IUserApplication _userApplication;
-        public AccountController(IUserApplication userApplication,
-            UserManager<ApplicationUsers> userManager) 
+        public AccountController(IUserApplication userApplication) 
         {
             this._userApplication = userApplication;
         }
@@ -32,6 +32,10 @@ namespace Wheeler.Web.Api.Controller.Account
                     return BadRequest("Invalid inputs.");
                var result= await _userApplication.Register(request);
                 return Ok(ResponseModel.Success("User registered successfully.",result));
+            }
+            catch(CustomException ex)
+            {
+                return StatusCode(StatusCodes.Status501NotImplemented, ResponseModel.Info(ex.Message, request));
             }
             catch(Exception ex)
             {
