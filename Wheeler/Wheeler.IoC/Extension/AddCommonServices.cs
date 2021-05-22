@@ -5,9 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Wheeler.Application;
 using Wheeler.Domain;
 
-namespace Wheeler.IoC.Helper
+namespace Wheeler.IoC
 {
-    public static class CommonServicesHelper
+    public static class AddCommonServices
     {
         public static void ConfigureServices(IServiceCollection services)
         {

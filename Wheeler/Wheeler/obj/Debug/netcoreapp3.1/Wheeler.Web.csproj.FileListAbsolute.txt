@@ -89,3 +89,5 @@ D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.p
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\obj\Debug\netcoreapp3.1\Wheeler.Web.genruntimeconfig.cache
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Utils.dll
 D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Wheeler.Utils.pdb
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Project\Startup\Wheeler\Wheeler\Wheeler\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll

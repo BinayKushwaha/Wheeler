@@ -32,9 +32,9 @@ namespace Wheeler.Domain
                 applicationUser.Email = model.Email;
                 applicationUser.UserName = model.UserName;
 
-                var existingUser = _userManager.FindByNameAsync(model.UserName);
-                if (existingUser.Result != null)
-                    applicationUser = existingUser.Result;
+                var existingUser =await _userManager.FindByNameAsync(model.UserName);
+                if (existingUser != null)
+                    applicationUser = existingUser;
                 else
                 {
                     var newAddedUser =await _userManager.CreateAsync(applicationUser, model.Password);
@@ -42,7 +42,7 @@ namespace Wheeler.Domain
                         applicationUser =await _userManager.FindByNameAsync(model.UserName);
                 }
                
-                if (_userRepository.GetAync(a => a.UserId == applicationUser.Id) != null)
+                if (await _userRepository.GetAync(a => a.UserId == applicationUser.Id) != null)
                     throw new CustomException($"{model.UserName} as username already exist.");
                
                 AppUsers appUsers = new AppUsers();
@@ -58,7 +58,6 @@ namespace Wheeler.Domain
             }
             catch (Exception ex)
             {
-                // git dev branch create, commit and merge --test
                 throw;
             }
         }

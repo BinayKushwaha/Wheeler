@@ -354,6 +354,33 @@ namespace Wheeler.Database.Migrations
                     b.ToTable("PersonalDetails");
                 });
 
+            modelBuilder.Entity("Wheeler.Model.DbEntities.RefreshToken", b =>
+                {
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("JwtId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Token");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("RefreshToken");
+                });
+
             modelBuilder.Entity("Wheeler.Model.DbEntities.ApplicationRoles", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
@@ -480,6 +507,18 @@ namespace Wheeler.Database.Migrations
                     b.Navigation("AppUsers");
                 });
 
+            modelBuilder.Entity("Wheeler.Model.DbEntities.RefreshToken", b =>
+                {
+                    b.HasOne("Wheeler.Model.DbEntities.ApplicationUsers", "User")
+                        .WithOne("RefreshToken")
+                        .HasForeignKey("Wheeler.Model.DbEntities.RefreshToken", "UserId")
+                        .HasConstraintName("FK_RefreshToken_User")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Wheeler.Model.DbEntities.ApplicationRoles", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -503,6 +542,8 @@ namespace Wheeler.Database.Migrations
             modelBuilder.Entity("Wheeler.Model.DbEntities.ApplicationUsers", b =>
                 {
                     b.Navigation("AppUsers");
+
+                    b.Navigation("RefreshToken");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,10 +14,9 @@ namespace Wheeler.IoC
 
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
 
-            IdentityHelper.ConfigureService(services);
-            CommonServicesHelper.ConfigureServices(services);
-
-            RepositoryHelper.ConfiguerServices(services);
+            AddIdentityServices.ConfigureService(services,configuration);
+            AddRepositoryServices.ConfiguerServices(services);
+            AddCommonServices.ConfigureServices(services);
 
         }
     }

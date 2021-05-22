@@ -11,5 +11,6 @@ namespace Wheeler.Model.DbEntities
         public bool IsActive { get; set; }
 
         public virtual AppUsers  AppUsers{ get; set; }
+        public RefreshToken RefreshToken { get; set; }
     }
 }

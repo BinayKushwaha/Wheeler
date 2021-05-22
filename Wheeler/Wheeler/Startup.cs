@@ -38,12 +38,16 @@ namespace Wheeler
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseRouting();
+
             IdentityDataInitializer.SeedIdentity(userManager, roleManager);
+            
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
             
             app.UseEndpoints(endpoints =>
             {
@@ -57,7 +61,7 @@ namespace Wheeler
                 //    );
             });
 
-            
+
         }
     }
 }

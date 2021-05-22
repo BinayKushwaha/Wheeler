@@ -6,7 +6,7 @@ using Wheeler.Database.Repository;
 
 namespace Wheeler.IoC.Helper
 {
-    public static class RepositoryHelper
+    public static class AddRepositoryServices
     {
         public static void ConfiguerServices(IServiceCollection services)
         {
